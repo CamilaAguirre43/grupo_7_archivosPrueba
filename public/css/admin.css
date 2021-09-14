@@ -1,0 +1,128 @@
+.admin{
+    box-sizing: border-box;
+    background-color: var(--color-1);
+    font-family: "Poppins";
+}
+
+.admin main h2{
+    margin: 20px 15px;
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-4);
+}
+
+.admin main .add{
+    cursor: pointer;
+    font-size: 18px;
+    margin: 15px;
+    background-color: var(--color-4);
+    color: var(--color-1);
+    border: 3px solid var(--color-3);
+    border-radius: 5px;
+    padding: 7px 10px;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.admin main .add:hover{
+    border: 3px solid var(--color-1);
+    box-shadow: 0 0 5px var(--color-4);
+}
+
+.admin main .add a{
+    color: #fff;
+}
+
+.admin main article{
+    margin: 30px auto;
+    padding: 25px 15px;
+    width: 80%;
+    background-color: var(--color-2);
+    border: 2px solid var(--color-4);
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+.admin main .image{
+    grid-row: 1/4;
+}
+
+.admin main .edit,
+.admin main .delate{
+    grid-column: 1/3;
+    margin:  10px auto;
+}
+
+.admin main article button{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--color-4);
+    background-color: var(--color-1);
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.admin main article button:hover{
+    border: 2px solid var(--color-1);
+    background-color: var(--color-3);
+}
+
+.admin main article i{
+    color: #000;
+    font-size: 20px;
+}
+
+.admin main .name,
+.admin main .price,
+.admin main .category{
+    padding-left: 10px;
+}
+
+
+.admin main img{
+    width: 100%;
+    border: solid 2px var(--color-4);
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.admin main img:hover{
+    border-color: var(--color-3);
+}
+
+@media (min-width: 600px){
+
+    .admin main article{
+        width: 90%;
+        grid-template-columns: 20% 20% 20% 20% 10% 10%;
+        grid-template-rows: 100%;
+        padding: 15px;
+    }
+
+    .admin main .image{
+        grid-row: initial;
+    }
+    
+    .admin main .edit,
+    .admin main .delate{
+        grid-column: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .admin main .name,
+    .admin main .price,
+    .admin main .category{
+        padding-left: 0px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .admin main img{
+        max-width: 100px;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body class="productCart">
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <main>
+        <h2>Mi carrito</h2>
+        <div class="conteiner">
+            <section>
+                <div class="titulo-columna">
+                    <h4 class="producto">Producto</h4>
+                    <h4>Cantidad</h4>
+                    <h4>precio</h4>
+                    <h4>Sub Total</h4>
+                </div>
+                <article>
+                    <h4>Producto</h4>
+                    <div class="img-detalles">
+                        <img src="/img/producto1.jpg" alt="">
+                        <p>nombre del producto/color/talle</p>
+                    </div>
+                    <h4>Cantidad</h4>
+                    <div class="cantidad">
+                        <p>1</p>
+                    </div>
+                    <h4>precio</h4>
+                    <h6>$9999,99</h6>
+                    <h5>$9999,99</h5>
+                    <div class="trash">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </article>
+                <article>
+                    <h4>Producto</h4>
+                    <div class="img-detalles">
+                        <img src="/img/producto2.jpeg" alt="">
+                        <p>nombre del producto/color/talle</p>
+                    </div>
+                    <h4>Cantidad</h4>
+                    <div class="cantidad">
+                        <p>1</p>
+                    </div>
+                    <h4>precio</h4>
+                    <h6>$9999,99</h6>
+                    <h5>$9999,99</h5>
+                    <div class="trash">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </article>
+                <div class="precio-total">
+                    <h5>Total (sin envio)</h5>
+                    <p>$9999.99</p>
+                </div>
+            </section>
+            <aside>
+                <h3>Datos Del Envío</h3>
+                <hr>
+                <form action="">
+                    <div class="metodo-de-envio">
+                        <label for="metodo-de-envio">Metodo De Envío</label>
+                        <p>
+                            <input type="radio" id="metodo-de-envio" name="metodo-de-envio">Correo Argentino a Sucursal
+                        </p>
+                        <p>
+                            <input type="radio" id="metodo-de-envio" name="metodo-de-envio">Correo Argentino a Domicilio
+                        </p>
+                        <p>
+                            <input type="radio" id="metodo-de-envio" name="metodo-de-envio">OCA a Domicilio
+                        </p>
+                        <p>
+                            <input type="radio" id="metodo-de-envio" name="metodo-de-envio">Retiro por local
+                        </p>
+                    </div>
+                    <div class="datos-del-envio">
+                        <h4>Completa tus Datos</h4>
+                        <ul>
+                            <li>
+                                <label for="nombre">Nombre/s</label>
+                                <input type="text" name="nombre" id="name">
+                            </li>
+                            <li>
+                                <label for="Apellido">Apellido/s</label>
+                                <input type="text" name="Apellido" id="apellido">
+                            </li>
+                            <li>
+                                <label for="dni/cuil">Dni/Cuil</label>
+                                <input type="number" name="dni/cuil" id="dni/cuil">
+                            </li>
+                            <li>
+                                <label for="calle">Calle</label>
+                                <input type="text" name="calle" id="calle">
+                            </li>
+                            <li>
+                                <label for="piso/dpto">Piso/Dpto</label>
+                                <input type="number" name="piso/dpto" id="piso/dpto">
+                            </li>
+                            <li>
+                                <label for="codigo-postal">Codigo Postal</label>
+                                <input type="number" name="codigo-postal" id="codigo-postal">
+                            </li>
+                            <li>
+                                <label for="provincia">Provincia</label>
+                                <input type="text" name="provincia" id="provincia">
+                            </li>
+                            <li>
+                                <label for="localidad">Localidad</label>
+                                <input type="text" name="localidad" id="localidad">
+                            </li>
+                            <li>
+                                <label for="telefono">Telefono</label>
+                                <input type="tel" name="telefono" id="telefono">
+                            </li>
+                            <li>
+                                <label for="celular">Celular</label>
+                                <input type="tel" name="celular" id="celular">
+                            </li>
+                            <li>
+                                <label for="comentario">Comentario Opcional</label>
+                                <textarea name="comentario" id="comentario" cols="22" rows="2"></textarea>
+                            </li>
+                            <li>
+                                <button type="submit">Comprar</button>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<header>
+    <article>
+        <div class="titulo">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a href="/" style="text-decoration: none;">
+                <h1>Seven Store</h1>
+            </a>
+        </div>
+        <nav>
+            <ol class="ol">
+                <li><a href="/products">Productos</a></li>
+                <li><a href="/products">Categorias</a></li>
+                <!-- <li><a href="/users/login">Ofertas</a></li> -->
+                <li><a href="#footer">Contacto</a></li>
+                <% if (locals.userLog) { %>
+                    <% if (locals.userLog.category === "admin") { %>
+                        <li><a href="/admin">Administracion</a></li>
+                    <% } %>
+                <% } %>
+            </ol>
+        </nav>
+        <div class="botones">
+            <div>
+                <div class="barra-de-busqueda">
+                    <form action="">
+                        <input type="text" placeholder="Buscar productos">
+                    </form>
+                </div>
+                <i class="fas fa-search"></i>
+            </div>
+            <% if (locals.userLog) { %>
+                <div class="avatar" onclick="document.getElementById('logout').style.display = 'block'">
+                    <img src="/img/users/<%= locals.userLog.image %> " alt="">
+                    <li id="logout"><a href="/users/logout">Cerrar sesion</a></li>
+                </div>
+            <% } else { %> 
+            <div>
+                <a href="/users/login">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <% } %> 
+            <div>
+                <a href="/products/cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+    </article>
+</header>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body class="productDetail">
+    <header>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+        <%- include('../partials/header') %>
+    </header>
+    <main>
+        <h2><%= product.name %> </h2>
+            <article class="producto">
+                <div class="imagenes">
+                    <div class="glider-contain img-contain">
+                        <button class="glider-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="glider-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="glider">
+                            <% product.images.forEach(img => { %>
+                                <img class="img-glider" src="/img/<%= img %> " alt="">
+                            <% }) %> 
+                        </div>
+                    </div>
+                    <img class="imgPrincipal" id="image-principal" src="/img/<%= product.images[0] %>" alt="">
+                    <div class="imgenes-secundarias">
+                        <% product.images.forEach(img => { %>
+                            <img class="imgSecundaria" onclick="document.getElementById('image-principal').setAttribute('src','/img/<%= img %>')" src="/img/<%= img %>" alt="">
+                        <% }) %>
+                    </div>
+                </div>
+                <article class="detalles-del-producto">
+                    <div class="seccion1">
+                        <h3><%= product.name %></h3>
+                        <p>cod. <%= product.id %> </p>
+                        <h3>$<%= product.price %> </h3>
+                    </div>
+                    <div class="seccion2">
+<!--                             <h4>color:</h4>
+                            <form action="resultado.html" method="POST">
+                                <input type="radio" id="color1" name="color">
+                                <label class="color1" for="color1"></label>
+                                <input type="radio" id="color2" name="color">
+                                <label class="color2" for="color2"></label>
+                                <input type="radio" id="color3" name="color">
+                                <label class="color3" for="color3"></label>
+                            </form> -->
+                        <form action="resultado.html" method="POST">
+                            <% if (product.talle.length !== 0) { %>
+                                <h4>talle:</h4> 
+                                <select>
+                                    <% product.talle.forEach(size => { %>
+                                    <option value="<%= size %>"><%= size %> </option>
+                                    <% }) %>
+                                </select>
+                            <% } %>
+                            <h4>cantidad:</h4>
+                            <select>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                                <option value=8>8</option>
+                                <option value=9>9</option>
+                                <option value=10>10</option>
+                            </select>
+                            <button class="agregar">
+                                <p>Agregar al carrito</p>
+                            </button>
+                        </form>
+                    </div>
+                </article>
+            </article>
+            <div class="description">
+                <h5>Descripción</h5>
+                <p><%= product.description %> </p>
+            </div>
+        <section class="relacionado">
+            <div class="title">
+                <hr><h3>Relacionado</h3><hr>
+            </div>
+            <div class="cotainer">
+                <div class="glider-contain">
+                    <button class="glider-prev leftGlider">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="glider-next rightGlider">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="glider relacionadoGlider">
+                        <% products.forEach(product => { %>
+                            <a href="/products/detail/<%= product.id %> ">
+                                <div class="element">
+                                    <img src="/img/<%= product.images[0] %> " alt="">
+                                    <h6><%= product.name %> </h6>
+                                    <p class="categoria"><%= product.category %> </p>
+                                    <p class="precio">$<%= product.price %> </p>
+                                </div>
+                            </a>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="/javascripts/carousel.js"></script>
+</body>
+</html>

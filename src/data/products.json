@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "name": "buzo vans",
+    "price": 22,
+    "description": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, ea necessitatibus vero soluta velit repellendus quae consequatur fugit doloremque sed et veritatis aut molestiae vitae accusantium. Possimus, impedit? Nisi, atque."
+    ],
+    "category": "Accesorios",
+    "images": [
+      "producto1.jpg",
+      "producto1_2.jpg",
+      "producto1_3.jpg"
+    ],
+    "talle": [
+      "38",
+      "39"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nike Air Force 1",
+    "price": 15000,
+    "description": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, ea necessitatibus vero soluta velit repellendus quae consequatur fugit doloremque sed et veritatis aut molestiae vitae accusantium. Possimus, impedit? Nisi, atque."
+    ],
+    "category": "zapatillas",
+    "talle": [
+      38,
+      40,
+      44
+    ],
+    "images": [
+      "producto2.jpeg",
+      "producto2_2.jpeg",
+      "producto2_3.jpeg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Remera adidas Yoda",
+    "price": 5600,
+    "description": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, ea necessitatibus vero soluta velit repellendus quae consequatur fugit doloremque sed et veritatis aut molestiae vitae accusantium. Possimus, impedit? Nisi, atque."
+    ],
+    "category": "remeras",
+    "talle": [
+      "S",
+      "M",
+      "XL"
+    ],
+    "images": [
+      "producto3.jpeg",
+      "producto3_2.jpeg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Gorra Looney Tunes",
+    "price": 3700,
+    "description": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, ea necessitatibus vero soluta velit repellendus quae consequatur fugit doloremque sed et veritatis aut molestiae vitae accusantium. Possimus, impedit? Nisi, atque."
+    ],
+    "category": "accesorios",
+    "talle": [],
+    "images": [
+      "producto4.jpeg",
+      "producto4_2.jpeg",
+      "producto4_3.jpeg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "buzo vans",
+    "price": 21111,
+    "category": "Indumentaria",
+    "talle": [
+      "40",
+      "41"
+    ],
+    "description": [
+      "aaaaaaaaaaaaaaaaaaaaaaa"
+    ],
+    "images": [
+      "images-1630035269330.jpg",
+      "images-1630035269363.jpg"
+    ]
+  }
+]

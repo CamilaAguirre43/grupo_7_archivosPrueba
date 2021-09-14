@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body class="home">
+    <header>
+        <%- include('./partials/header') %>
+    </header>
+    <main>
+    <section class="container-slider">
+        <div class="slider" id="slider">
+            <div class="slider__section">
+                <img src="/img/banner2.jpg" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img src="/img/banner1.jpg" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img id="img3" src="/img/banner2.jpg" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img src="/img/banner1.jpg" alt="" class="slider__img">
+            </div>
+        </div>
+        <span class="slider__btn slider__btn--left" id="btn-left"><i class="fas fa-chevron-left"></i></span>
+        <span class="slider__btn slider__btn--right" id="btn-right"><i class="fas fa-chevron-right"></i></span>
+    </section>
+    <script src="/javascripts/slider.js"></script>
+    <section class="products">
+    <article class="products1">
+    <div class="image">
+        <a href="/products/detail/<%= products[0].id %> ">
+             <img src="/img/<%= products[0].images[0] %> " alt="">
+        </a>
+    </div>
+    <div>
+        <a href="/products/detail/<%= products[1].id %> ">
+            <img src="/img/<%= products[1].images[0] %> " alt="">
+       </a>
+    </div>
+    </article>
+    <article class="products2">
+    <div>
+        <a href="/products/detail/<%= products[2].id %> ">
+            <img src="/img/<%= products[2].images[0] %> " alt="">
+       </a>
+    </div>
+    <div>
+        <a href="/products/detail/<%= products[3].id %> ">
+            <img src="/img/<%= products[3].images[0] %> " alt="">
+       </a>
+    </div>
+    </article>
+    </section>
+    </main>
+    <section class="bigPost">
+        <div class="post">
+            <h2>new in</h2>
+        </div>
+    </section>
+    <section class="mid-banner">
+            <img src="/img/mid-banner-agvsha.jpeg" alt="">
+            <h1 class="md-name">Seven Store</h1>
+    </section>
+    <div class="box-linea2">
+        <hr class="linea2">
+    </div>
+    <article class="ig">
+        <i class="fab fa-instagram"></i>
+        <h3>#INSTAGRAM</h3>
+        <div class="frase-ig">
+            <p>¡ Seguinos en nuestro instragram y enterate de todos los nuevos looks !</p>
+        </div>
+    </article>
+    <section class="catalogo-productos">
+        <article class="producto1">
+            <div>
+                <a href="/products/detail/<%= products[0].id %> ">
+                    <img src="/img/<%= products[0].images[0] %> " alt="">
+               </a>
+            </div>
+        </article>
+        <article class="producto2">
+            <div>
+                <a href="/products/detail/<%= products[1].id %> ">
+                    <img src="/img/<%= products[1].images[0] %> " alt="">
+               </a>
+            </div>
+        </article>
+        <article class="producto3">
+            <div>
+                <a href="/products/detail/<%= products[2].id %> ">
+                    <img src="/img/<%= products[2].images[0] %> " alt="">
+               </a>
+            </div>
+        </article>
+        <article class="producto4">
+            <div>
+                <a href="/products/detail/<%= products[3].id %> ">
+                    <img src="/img/<%= products[3].images[0] %> " alt="">
+               </a>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+</html>

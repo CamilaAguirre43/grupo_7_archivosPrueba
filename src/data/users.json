@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Juan",
+    "lastname": "Leonardelli",
+    "email": "antuezequiel01@gmail.com",
+    "password": "$2a$10$UUrLZSzsc2ve1CqmiAj44e5bewnyoUIppLhjq9/E4Ly2G3ZsW.vNy",
+    "number": 1151768589,
+    "image": "default-avatar.jpg",
+    "category": "admin"
+  },
+  {
+    "id": 2,
+    "name": "Jona",
+    "lastname": "Oviedo",
+    "email": "jona19_92@hotmail.com",
+    "password": "$2a$10$ar2waZmItAj4dF79jfNbKOKFxAdkpdQZJdeOr7be08pn.bqUlxLmi",
+    "number": 1140893426,
+    "image": "avatar-1630109007299.jpg",
+    "category": "user"
+  },
+  {
+    "id": 3,
+    "name": "camila",
+    "lastname": "aguirre",
+    "email": "camila@aguirre.com",
+    "password": "$2a$10$E9xFmiNj9NYIETN5KrINouvopv1.hpR8dYF1tbtffSCYsPfBjOMiK",
+    "number": 1155117894,
+    "image": "default-avatar.jpg",
+    "category": "admin"
+  }
+]

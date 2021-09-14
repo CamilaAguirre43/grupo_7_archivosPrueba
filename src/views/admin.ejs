@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body >
+<body class="admin">
+    <header>
+        <%- include('./partials/header') %>
+    </header>
+    <main>
+        <h2>Productos</h2>
+        <button class="add">
+            <a href="/products/add">Crear Nuevo Producto</a>
+        </button>
+        <% products.forEach(product => { %>
+            <article>
+                <div class="image">
+                    <a href="/products/detail/<%= product.id %> ">
+                        <img src="/img/<%= product.images[0] %> " alt="">
+                    </a>
+                </div>
+                <div class="name">
+                    <h4><%= product.name %></h4>
+                </div>
+                <div class="price">
+                    <span>$<%= product.price %></span>
+                </div>
+                <div class="category">
+                    <h5><%= product.category %></h5>
+                </div>
+                <div class="edit">
+                    <form action="/products/edit/<%= product.id %>" method="GET">
+                        <button>
+                            <i class="fas fa-pen-square"></i>
+                        </button>
+                    </form>    
+                </div>
+                <div class="delate">
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </form>
+                </div>
+            </article>
+        <% }) %>
+    </main>
+    <footer>
+        <%- include('./partials/footer') %> 
+    </footer>
+</body>
+</html>
